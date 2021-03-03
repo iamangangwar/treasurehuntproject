@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 int CrackThePassword(char pwd[]){                
 
 for(int i = 0; i < 7; i++){
