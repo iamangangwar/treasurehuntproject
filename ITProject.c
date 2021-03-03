@@ -2,6 +2,8 @@
 #include<stdlib.h>
 
 
+enum status{Pass,Fail};
+
 int CrackThePassword(char pwd[]){                
 
 for(int i = 0; i < 7; i++){
@@ -14,6 +16,8 @@ for(int i = 0; i < 7; i++){
 }
 
 int main(){
+    
+enum status GameStatus;    
     
 int id;
 
@@ -54,6 +58,7 @@ int count = 0;
 while(count < 3){
     if(CrackThePassword(pwd) == 1){
         printf("\nVoila!!! You are on fire... Proceed to next level..");
+        Gamestatus = Pass;
         break;
     }else{
         printf("\nYou got %d tries left.", 2-count);
@@ -62,6 +67,7 @@ while(count < 3){
            scanf("%s",pwd); 
         }else{
            printf(" Better Luck next time!!!");
+           Gamestatus = Fail; 
         break;
         }
     }
