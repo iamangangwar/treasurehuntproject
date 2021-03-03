@@ -16,13 +16,7 @@ int encryption(void)
 
     printf("\n                                     -------------LAST LEVEL-------------          \n");
     printf("Cryptography is a method of protecting information and communications through the use of codes, so that only those \nfor whom the information is intended can read and process it.");
-    printf(" One of the first ciphering technique is Caesar Cipher, \nin this, we shift the positions alphabets to encode the message. ");
-    printf("For example, if the shift we used is 1, the cipher \ntext of HELLO will be IFMMP.\n\n");
-    printf("However, this method was very easy to crack, which led to the development of new methods of encrypting the message. \n");
-    printf("One method of ciphering the text is called Polyalphabetic Cipher, in this method, one secret shift word is shared, \nand the alphabets of the message are shifted as per the alphabet number in the shift word. ");
-    printf("For example, if the shift \nword is GAME, then the shift in the message text would be 7 1 13 5 for consecutive letters, and this will repeat for \nthe whole message.\n\n");
-    printf("But people also figured out how to crack this method, hence, again, a new method developed, called the One Time Pad. \n");
-    printf("In this method, each alphabet of the message is shifted by a RANDOM number. \n\nPseudorandom numbers are quite interesting, aren't they?");
+    printf(" Some of the methods of cryptography include Caesar Cipher, \nPolyalphabetic Cipher and One Time Pad.");
 
     /*Ciphering the word "success" as there are different random numbers displayed for same seed in different compilers, increasing
      the ascii value of alphabets by the number on ones digit in the respective pseudorandom number*/
@@ -60,19 +54,19 @@ int encryption(void)
         }
 
         //Ciphering the word "hello"
-        for (int i = 0; i <= 4; i++)
+        for (int l = 0; l <= 4; l++)
         {
             int num1 = rand();
             num1 = num1 % 10;
-            int ascii = exp[i];
+            int ascii = exp[l];
             ascii = ascii + num1;
             char c = ascii;
-            cipherexp[i] = c;
+            cipherexp[l] = c;
         }
         printf("\nEncrypted message    :     %s\n\n", cipherexp);
     }
 
-    printf("For your convenience, we will print 10 random numbers for you, all you have to do is give us the seed, but remember, \nyou will get only 5 chances!\n\n");
+    printf("For your convenience, we will print 10 random numbers for you, all you have to do is give us the seed, but remember, \nyou will only get 5 chances!\n\n");
 
     int count = 5;
     while (count != 0)
