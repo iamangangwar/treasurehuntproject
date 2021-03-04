@@ -37,34 +37,34 @@ int encryption(void)
     printf("REMEMBER, ITS ONLY THE ONES THAT MATTER!\n\n");
 
     //Giving some examples
-    printf("Some encrypted examples of word 'hello' are - \n");
+    printf("Encrypted example of word 'hello' is - \n");
 
-    for (int j = 3; j <= 5; j++)
+
+    char exp[5] = "hello", cipherexp[5] = "";
+
+    printf("KEY = 3\n");
+
+    srand(3);
+    printf("Pseudorandom numbers    :   ");
+
+    for (int i = 0; i <= 4; i++)
     {
-        char exp[5] = "hello", cipherexp[5] = "";
-
-        printf("KEY = %d\n", j);
-
-        printf("Pseudorandom numbers    :   ");
-
-        for (int i = 0; i <= 4; i++)
-        {
-            int num1 = rand();
-            printf("%d ", num1);
-        }
-
-        //Ciphering the word "hello"
-        for (int l = 0; l <= 4; l++)
-        {
-            int num1 = rand();
-            num1 = num1 % 10;
-            int ascii = exp[l];
-            ascii = ascii + num1;
-            char c = ascii;
-            cipherexp[l] = c;
-        }
-        printf("\nEncrypted message    :     %s\n\n", cipherexp);
+        int num1 = rand();
+        printf("%d ", num1);
     }
+
+    //Ciphering the word "hello" as an example
+    for (int l = 0; l <= 4; l++)
+    {
+        int num1 = rand();
+        num1 = num1 % 10;
+        int ascii = exp[l];
+        ascii = ascii + num1;
+        char c = ascii;
+        cipherexp[l] = c;
+    }
+    printf("\nEncrypted message    :     %s\n\n", cipherexp);
+
 
     printf("For your convenience, we will print 10 random numbers for you, all you have to do is give us the seed, but remember, \nyou will only get 5 chances!\n\n");
 
