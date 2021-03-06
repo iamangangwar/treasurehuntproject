@@ -41,12 +41,12 @@ int main(void)
     srand(3);
     printf("Pseudorandom numbers    :   ");
 
-    for (int i = 0; i <= 4; i++)
+    for (int i = 0; i <= 9; i++)
     {
         int num1 = rand() % 26 + 1;
         printf("%d ", num1);
     }
-
+    srand(3);
     //Ciphering the word "hello" as an example
     for (int l = 0; l <= 4; l++)
     {
@@ -110,7 +110,7 @@ int main(void)
     }
     if (strcmp(answer, "success") == 0)
     {
-        printf("\nWell done!! You have achieved |xihnz{ in cracking the code!\n");
+        printf("\nWell done!! You have achieved %s in cracking the code!\n", cipher);
     }
     else
     {
