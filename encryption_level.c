@@ -7,7 +7,7 @@ int main(void)
     char word[7] = "success", cipher[7] = "", answer[7] = "";
 
     printf("\n                                     -------------LAST LEVEL-------------          \n");
-    printf("Cryptography is a method of protecting information and communications through the use of codes, so that only those \nfor whom the information is intended can read and process it.");
+    printf("\nCryptography is a method of protecting information and communications through the use of codes, so that only those \nfor whom the information is intended can read and process it.");
     printf(" Some of the methods of cryptography include Caesar Cipher, \nPolyalphabetic Cipher and One Time Pad.");
 
     /*Ciphering the word "success" as there are different random numbers displayed for same seed in different compilers, increasing
