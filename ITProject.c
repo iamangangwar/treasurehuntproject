@@ -58,7 +58,7 @@ int count = 0;
 while(count < 3){
     if(CrackThePassword(pwd) == 1){
         printf("\nVoila!!! You are on fire... Proceed to next level..");
-        Gamestatus = Pass;
+        GameStatus = Pass;
         break;
     }else{
         printf("\nYou got %d tries left.", 2-count);
@@ -67,7 +67,7 @@ while(count < 3){
            scanf("%s",pwd); 
         }else{
            printf(" Better Luck next time!!!");
-           Gamestatus = Fail; 
+           GameStatus = Fail;
         break;
         }
     }
