@@ -67,7 +67,7 @@ while(count < 3){
            scanf("%s",pwd); 
         }else{
            printf(" Better Luck next time!!!");
-           GameStatus = Fail; 
+           GameStatus = Fail;
         break;
         }
     }
